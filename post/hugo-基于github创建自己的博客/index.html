@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>[Hugo] 基于github创建自己的博客 - Alkaid Sora</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="DOKONG" /><meta name="description" content="搭建属于自己的Blog 在基于*Github Pages*搭建Blog的静态网站框架中有： | | Github stars| issues(open) | issues(close) | language | multilingual | free | | &amp;mdash;&amp;mdash;- | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;ndash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash; | &amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;&amp;mdash;-| &amp;mdash;&amp;mdash;" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.59.1 with theme even" />
+
+
+<link rel="canonical" href="https:alkaid.fun/post/hugo-%E5%9F%BA%E4%BA%8Egithub%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="[Hugo] 基于github创建自己的博客" />
+<meta property="og:description" content="搭建属于自己的Blog 在基于*Github Pages*搭建Blog的静态网站框架中有： | | Github stars| issues(open) | issues(close) | language | multilingual | free | | &mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;-| &mdash;&mdash;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https:alkaid.fun/post/hugo-%E5%9F%BA%E4%BA%8Egithub%E5%88%9B%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" />
+<meta property="article:published_time" content="2018-06-17T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-09-17T00:00:00+00:00" />
+<meta itemprop="name" content="[Hugo] 基于github创建自己的博客">
+<meta itemprop="description" content="搭建属于自己的Blog 在基于*Github Pages*搭建Blog的静态网站框架中有： | | Github stars| issues(open) | issues(close) | language | multilingual | free | | &mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;-| &mdash;&mdash;">
+
+
+<meta itemprop="datePublished" content="2018-06-17T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2019-09-17T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="1337">
+
+
+
+<meta itemprop="keywords" content="Hugo,Github,Blog," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[Hugo] 基于github创建自己的博客"/>
+<meta name="twitter:description" content="搭建属于自己的Blog 在基于*Github Pages*搭建Blog的静态网站框架中有： | | Github stars| issues(open) | issues(close) | language | multilingual | free | | &mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;-| &mdash;&mdash;"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Alkaid</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="https://github.com/zofnk">
+        <li class="mobile-menu-item">GitHub</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Alkaid</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="https://github.com/zofnk">GitHub</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">[Hugo] 基于github创建自己的博客</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2018-06-17 </span>
+        <div class="post-category">
+            <a href="/categories/hugo/"> Hugo </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#搭建属于自己的blog">搭建属于自己的Blog</a>
+<ul>
+<li><a href="#前期准备">前期准备</a>
+<ul>
+<li><a href="#1-下载二进制文件">1. 下载二进制文件</a></li>
+<li><a href="#2-修改环境变量path">2. 修改环境变量PATH</a></li>
+<li><a href="#3-验证安装">3. 验证安装</a></li>
+<li><a href="#4-创建站点">4. 创建站点</a></li>
+<li><a href="#5-安装主题">5. 安装主题</a></li>
+<li><a href="#6-发表文章">6. 发表文章</a></li>
+<li><a href="#7-预览效果">7.预览效果</a></li>
+<li><a href="#8-部署github-pages">8.部署Github Pages</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h3 id="搭建属于自己的blog">搭建属于自己的Blog</h3>
+
+<p>在基于*Github Pages*搭建Blog的静态网站框架中有：
+|          | Github stars| issues(open) | issues(close) | language | multilingual | free  |
+| &mdash;&mdash;- | &mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash;&mdash;&mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash; | &mdash;&mdash;&mdash;&mdash;&mdash;-| &mdash;&mdash; |
+|  <a href="[https://github.com/hexojs/hexo](https://github.com/hexojs/hexo)">Hexo</a> |  28.6k  |  194  |  3083  | JavaScript  |  √  |  √  |
+|  <a href="[https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)">Hugo</a>  |  39.3k  |  379  | 3665  |  Go  |  -  |  √  |
+|  <a href="[https://github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)">Jekyll</a>  | 39.1k |  85  |  3954  |  Ruby  |  -  |  √  |
+|  <a href="[https://github.com/TryGhost/Ghost](https://github.com/TryGhost/Ghost)">Ghost</a>  | 31.7k  |  51  |  5517  |  JavaScript  |  -  |  ×  |</p>
+
+<p>对比了下数据来看(数据更新于19-09-17)
+* Jekyll相对其他三个更活跃，而且免费。
+* Ghost收费，在有其他3个框架相对比下就显得不建议使用</p>
+
+<p>前三个我都有搭建起来过,鉴于我本身不是前端开发,在没有多少前端基础的情况下,三个框架都相对比较容易上手,搭建到部署也简易快捷,在这先记录下用<a href="[https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)">Hugo</a>的搭建过程</p>
+
+<h4 id="前期准备">前期准备</h4>
+
+<ul>
+<li><p>需要用到git操作</p>
+
+<h5 id="1-下载二进制文件">1. 下载二进制文件</h5></li>
+
+<li><p>到<a href="[https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)">Hugo Github</a>下的 <a href="https://github.com/gohugoio/hugo/releases">releases</a>下载自己系统对应的二进制文件。我的是WIN10所以选择<a href="https://github.com/gohugoio/hugo/releases/download/v0.59.1/hugo_0.59.1_Windows-64bit.zip">hugo_0.59.1_Windows-64bit.zip</a></p>
+
+<h5 id="2-修改环境变量path">2. 修改环境变量PATH</h5></li>
+
+<li><p>解压得到<code>hugo.exe</code>文件并将它,并将它添加进环境变量中</p>
+
+<h5 id="3-验证安装">3. 验证安装</h5></li>
+
+<li><p>Hugo,<code>win + R</code>后输入<code>cmd</code>后打开命令行界面,输入<code>hugo version</code>后,终端输出<code>Hugo Static Site Generator v0.59.1-D5DAB232 windows/amd64 BuildDate:时间</code>即可</p>
+
+<h5 id="4-创建站点">4. 创建站点</h5></li>
+
+<li><p>继续在命令行下进入自己创建的站点文件夹</p></li>
+
+<li><p>输入<code>hugo new site myBlog</code>后回车,可以看到一个叫<code>myBlog</code>的目录后,输入<code>cd myBlog</code>,进入目录</p>
+
+<h5 id="5-安装主题">5. 安装主题</h5></li>
+
+<li><p>在<a href="https://themes.gohugo.io/">Hugo Themes</a>或者<a href="https://github.com/search?o=desc&amp;q=hugo-themes&amp;s=stars&amp;type=Repositories">Github</a>中找一个自己满意的样式,以下以我自己选择的<a href="https://github.com/olOwOlo/hugo-theme-even">Even</a>举例说明</p></li>
+
+<li><p>直接下载<a href="https://github.com/olOwOlo/hugo-theme-even/archive/master.zip">even-master.zip</a> 文件,或者在命令行中输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ git clone https://github.com/olOwOlo/hugo-theme-even themes/hugo-theme-even</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>下载完毕后在<code>myBlog</code>文件夹下打开<code>config.toml</code>,将<code>theme</code>的值修改为刚下载完的主题文件夹名称后保存退出</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">theme = &#34;hugo-theme-even&#34;</pre></td></tr></table>
+</div>
+</div>
+<p>因为<a href="https://github.com/olOwOlo/hugo-theme-even">Even</a>有自带的配置文件,所以可以将<code>myBlog/themes/hugo-theme-even/exampleSite/</code>中的<code>config.toml</code>直接覆盖至<code>myBlog/</code>目录下</p>
+
+<h5 id="6-发表文章">6. 发表文章</h5></li>
+
+<li><p>在命令行中输入<code>hugo new posts/Hello_World.md</code>后回车(这里的<code>post</code>要根据主题的设定而定,<a href="https://github.com/olOwOlo/hugo-theme-even">Even</a>需要将<code>posts</code>更改成<code>post</code>)</p></li>
+
+<li><p>在<code>myBlog/content/posts/</code>下会生成<code>Hello_World.md</code>的文件,这就是需要撰写的第一篇文章了,并且需要了解<a href="https://www.jianshu.com/p/191d1e21f7ed">Markdown</a>的语法知识</p></li>
+
+<li><p>打开<code>Hello_World.md</code>后可以看到已经有一段自带的头部信息了</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">title:  #标题
+date:  #时间
+draft:  #草稿</pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>在编写完自己要写的内容后把<code>draft</code>的值改成<code>false</code></p></li>
+
+<li><p><a href="https://github.com/olOwOlo/hugo-theme-even">Even Theme</a>中有自带的文章,可以用来预览一番,拷贝<code>myBlog/themes/hugo-theme-even/exampleSite/content/</code>目录下的所有md文件,黏贴至<code>myBlog/content/posts/</code>目录下即可</p>
+
+<h5 id="7-预览效果">7.预览效果</h5></li>
+
+<li><p>在命令行中输入<code>hugo server -D</code>回车,即可看到以下输出信息</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Building sites …
+               | EN
++------------------+----+
+Pages            | 32
+Paginator pages  |  0
+Non-page files   |  0
+Static files     | 43
+Processed images |  0
+Aliases          | 11
+Sitemaps         |  1
+Cleaned          |  0
+
+Total in 32 ms
+Watching for changes in YOUR_PATH{archetypes,content,data,layouts,static,themes}
+Watching for config changes in /YOUR_PATH\config.toml
+Environment: &#34;development&#34;
+Serving pages from memory
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at 127.0.0.1:1313 (bind address 127.0.0.1)
+Press Ctrl+C to stop</pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<p>打开浏览器输入<a href="127.0.0.1:1313">127.0.0.1:1313</a>就能预览到刚刚安装的主题和发布的作品了</p>
+
+<h5 id="8-部署github-pages">8.部署Github Pages</h5>
+
+    </div>
+
+    
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hugo/">Hugo</a>
+          <a href="/tags/github/">Github</a>
+          <a href="/tags/blog/">Blog</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/chinese-preview/">
+            <span class="next-text nav-default">《长恨歌》</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: 'UXB7B8emR8JE3JcjmpinrWFd-gzGzoHsz',
+        appKey: 'O6aWPFnw5znq8yuQs9sWiJIq',
+        notify:  false ,
+        verify:  false ,
+        avatar:'hide',
+        placeholder: '趁热加点料...',
+        visitor:  false 
+    });
+  </script>
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://github.com/" class="iconfont icon-github" title="github"></a>
+      <a href="https://weibo.com/zofnk" class="iconfont icon-weibo" title="weibo"></a>
+      <a href="https://space.bilibili.com/458600" class="iconfont icon-bilibili" title="bilibili"></a>
+  <a href="https:alkaid.fun/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">DOKONG</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+  <script type="text/javascript">
+    window.MathJax = {
+      showProcessingMessages: false,
+      messageStyle: 'none'
+    };
+  </script>
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"  integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
