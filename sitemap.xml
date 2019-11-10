@@ -73,7 +73,30 @@
   
   <url>
     <loc>https:alkaid.fun/post/2017-08-14-android-bitmap%E5%B9%B3%E7%A7%BB%E6%A1%88%E4%BE%8B%E8%AE%B0%E5%BD%95/</loc>
-    <priority>0</priority>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https:alkaid.fun/categories/android/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https:alkaid.fun/tags/android/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https:alkaid.fun/tags/bitmap/</loc>
+    <lastmod>2017-08-14T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
   
 </urlset>
