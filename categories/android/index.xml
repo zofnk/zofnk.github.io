@@ -12,12 +12,21 @@
     
     
     <item>
-      <title>2017-08-14 Android - Bitmap平移案例记录</title>
+      <title>[Android] 用Bitmap做位移实例记录</title>
       <link>https:alkaid.fun/post/2017-08-14-android-bitmap%E5%B9%B3%E7%A7%BB%E6%A1%88%E4%BE%8B%E8%AE%B0%E5%BD%95/</link>
       <pubDate>Mon, 14 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>https:alkaid.fun/post/2017-08-14-android-bitmap%E5%B9%B3%E7%A7%BB%E6%A1%88%E4%BE%8B%E8%AE%B0%E5%BD%95/</guid>
       <description>背景 : 单张背景图做平移,至图片的最左移动至最右边,ImageView本身没有什么变化,类似Android的桌面单张长图的模式。 想法: * 需要达</description>
+    </item>
+    
+    <item>
+      <title>[Android] 使用Button自带点击效果</title>
+      <link>https:alkaid.fun/post/2017-02-07-android-%E4%BD%BF%E7%94%A8button%E8%87%AA%E5%B8%A6%E7%9A%84%E7%82%B9%E5%87%BB%E6%95%88%E6%9E%9C/</link>
+      <pubDate>Tue, 07 Feb 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https:alkaid.fun/post/2017-02-07-android-%E4%BD%BF%E7%94%A8button%E8%87%AA%E5%B8%A6%E7%9A%84%E7%82%B9%E5%87%BB%E6%95%88%E6%9E%9C/</guid>
+      <description>先看下效果: 通过增强/减弱 CaradView的Elevation(阴影)范围来给视觉造成BUTTON下沉的错觉效果，因为是自带的API，所以</description>
     </item>
     
   </channel>
